@@ -12,7 +12,7 @@ for project in $projects
 do
     cd $project
     #mvn clean
-    mvn package install dependency:copy-dependencies
+    mvn -B package install dependency:copy-dependencies
     cp target/*.jar ../build/
     cp target/dependency/* ../build/
     cd ..
